@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Customer {
     String name;
@@ -56,10 +57,8 @@ public class Customer {
 
 
     public void selectOption() throws Exception {
-        System.out.println("Check Balance, Withdrawl, Cancel");
+        System.out.println("Check Balance, Withdrawl, Cancel, Cashout");
         String option = atm.scanner.nextLine();
-
-
 
         if (option.equalsIgnoreCase("balance")) {
 
@@ -90,6 +89,9 @@ public class Customer {
         } else if (option.equalsIgnoreCase("cancel")) {
             System.out.println("Thank you, Have a great day!");
         }
-
+        else if (option.equalsIgnoreCase("cashout")){
+            atm.data.remove(this.name);
+            System.out.println(name + " Thank you for your business");
+        }
     }
 }
