@@ -51,14 +51,14 @@ public class Customer {
 
     void addPassword(Customer customer) {
         System.out.println("Please enter a password");
-        String pass = atm.scanner.nextLine();
+        String pass = Atm.scanner.nextLine();
         customer.password = pass;
     }
 
 
     public void selectOption() throws Exception {
         System.out.println("Check Balance, Withdrawl, Cancel, Cashout");
-        String option = atm.scanner.nextLine();
+        String option = Atm.scanner.nextLine();
 
         if (option.equalsIgnoreCase("balance")) {
 
@@ -66,7 +66,7 @@ public class Customer {
 
         } else if (option.equalsIgnoreCase("withdrawl")) {
             System.out.println("How much would you like to withdrawl");
-            String withdrawl = atm.scanner.nextLine();
+            String withdrawl = Atm.scanner.nextLine();
             int withdrawlNum = Integer.valueOf(withdrawl);
             if (withdrawlNum < 100) {
 
@@ -90,7 +90,7 @@ public class Customer {
             System.out.println("Thank you, Have a great day!");
         }
         else if (option.equalsIgnoreCase("cashout")){
-            atm.data.remove(this.name);
+            Atm.data.remove(this.name);
             System.out.println(name + " Thank you for your business");
         }
     }

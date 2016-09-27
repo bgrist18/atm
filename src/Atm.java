@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 
-public class atm {
+public class Atm {
     static Scanner scanner = new Scanner(System.in);
 
     static HashMap<String, Customer> data = new HashMap<>();
@@ -53,7 +53,5 @@ public class atm {
 
         return nameTypedIn;
 
-        }
     }
-
-
+}
