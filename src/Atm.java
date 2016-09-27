@@ -36,6 +36,14 @@ public class Atm {
     public static String chooseName() {
         System.out.println("What is your name?");
         String nameTypedIn = scanner.nextLine();
+
+        if (nameTypedIn.equalsIgnoreCase("")) {
+            System.out.println("userNameDoesNotExist");
+        } else {
+            System.out.println("Welcome, " + nameTypedIn);
+        }
+
+
         if (!data.containsKey(nameTypedIn)) {
             System.out.println("Please enter your new Username");
             String typedInName = scanner.nextLine();
@@ -45,11 +53,7 @@ public class Atm {
             System.out.println("Welcome " + typedInName + "!");
         }
 
-        if (nameTypedIn.equalsIgnoreCase("")) {
-            System.out.println("userNameDoesNotExist");
-        } else {
-            System.out.println("Welcome, " + nameTypedIn);
-        }
+
 
         return nameTypedIn;
 
